@@ -8,4 +8,6 @@
                  [com.novemberain/monger "3.5.0"]]
   :main ^:skip-aot restful.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}
+             :dev {:source-paths ["dev"]
+                   :dependencies [[org.clojure/tools.namespace "1.1.0"]]}})

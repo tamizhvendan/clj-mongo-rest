@@ -5,7 +5,10 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [mount "0.1.16"]
-                 [com.novemberain/monger "3.5.0"]]
+                 [com.novemberain/monger "3.5.0"]
+                 [ring "1.8.2"]
+                 [ring/ring-json "0.5.0"]
+                 [bidi "2.1.6"]]
   :main ^:skip-aot restful.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}

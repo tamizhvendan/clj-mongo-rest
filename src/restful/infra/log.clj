@@ -7,3 +7,7 @@
 
 (defn info [msg]
   (.info logger msg))
+
+(defn fatal [msg]
+  (.severe logger msg)
+  (System/exit 1))

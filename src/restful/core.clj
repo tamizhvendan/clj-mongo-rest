@@ -1,6 +1,7 @@
 (ns restful.core
   (:require [restful.infra.log :as log]
-            [restful.infra.core :as infra])
+            [restful.infra.core :as infra]
+            [restful.infra.config :as config])
   (:gen-class))
 
 (.addShutdownHook (Runtime/getRuntime)
@@ -11,4 +12,4 @@
   "I don't do a whole lot ... yet."
   [& args]
   (infra/start-app)
-  (log/info "app started"))
+  (log/info (str "app started with mongo connection " (config/mongo-conn-str))))
